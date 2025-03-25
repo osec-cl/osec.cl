@@ -1,0 +1,36 @@
+---
+import Layout from "@components/layout.astro";
+
+const gen2024 = [
+  "Tomás Villegas (UCH)",
+  "Fabian Mendoza (PUC)",
+  "Ignacio Lara (USACH)",
+  "Lucas Mesías (USACH)",
+  "Camilo Araya (UCH)",
+];
+const gen2023 = [
+  "Emmanuel Norambuena (PUC)",
+  "Benja Vicente (PUC)",
+  "Sergio Rojas (UCH)",
+  "Lucas Natero",
+  "Diego Costa",
+];
+---
+
+<Layout>
+  <main class="mx-auto mb-10 flex w-fit flex-col items-center gap-10">
+    <h2 class="text-4xl font-semibold sm:text-6xl">Historia OSEC</h2>
+    <p class="text-balance text-3xl leading-9">
+      A continuación todas las personas cuyos esfuerzos posibilitaron la
+      iniciativa OSEC.
+    </p>
+    <h3 class="text-2xl font-semibold sm:text-4xl">Generación 2024</h3>
+    <ul class="list-disc">
+      {gen2024.map((name) => <li class="mb-1">{name}</li>)}
+    </ul>
+    <h3 class="text-2xl font-semibold sm:text-4xl">Generación 2023</h3>
+    <ul class="list-disc">
+      {gen2023.map((name) => <li class="mb-1">{name}</li>)}
+    </ul>
+  </main>
+</Layout>
